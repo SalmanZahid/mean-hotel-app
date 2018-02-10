@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="meanhotel">
+<head>
+  <title>MEAN hotel</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+</head>
+<body>
+  <navigation></navigation>
+
+  <div class="container">
+      <div ng-view></div>
+    </div>
+    
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-center">
+        <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png" height="26" alt="Full Stack Training"/></a>
+      </p>
+
+      <p class="text-muted text-center">
+        <small>&copy; 2018 Full Stack Training Ltd</small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="jquery/jquery-2.1.4.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="angular-app/app.js"></script>
+
+  <!-- #region Controllers -->
+  <script src="angular-app/hotels/hotelsController.js"></script>
+  <script src="angular-app/users/login/loginController.js"></script>
+  <script src="angular-app/users/registration/registrationController.js"></script>
+
+  <!-- #region Factory -->
+  <script src="angular-app/hotels/factory/dataFactory.js"></script>
+  <script src="angular-app/auth/factory/AuthFactory.js"></script>
+  <script src="angular-app/users/factory/dataFactory.js"></script>
+
+  <!-- #region Interceptors -->
+  <script src="angular-app/auth/interceptors/AuthInterceptor.js"></script>
+  <!-- #endregion -->
+
+  <!-- #region Directives -->
+  <script src="angular-app/hotels/directives/hotel-rating-directive.js"></script>
+  <script src="angular-app/navigation/directive/navigation.js"></script>
+
+</body>
+</html>
